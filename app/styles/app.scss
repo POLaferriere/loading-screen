@@ -1,0 +1,66 @@
+@import 'bourbon';
+
+html, body, #application {
+	height: 100%;
+}
+
+.loading-screen {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+}
+
+.loading-enter{
+	opacity: 0.01;
+	transform: translatey(-100px)
+}
+
+.loading-enter.loading-enter-active {
+	opacity: 1;
+	transform: translatey(0.9em);
+	transition: all 1s ease-in-out;
+}
+
+.loading-leave{
+	opacity: 1;
+	transform: translate(11px, -0.9em);
+}
+
+.loading-leave.loading-leave-active {
+	opacity: 0.01;
+	transform: translatey(100px);
+	transition: all 1s ease-in-out;
+}
+
+.dots {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+}
+
+.dots-container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.dot-container{
+	margin: 14px;
+}
+
+.dot {
+	@include size(20px 20px);
+	border-radius: 100%;
+	background: black;
+}
+
+#loading {
+	opacity: 0;
+}
